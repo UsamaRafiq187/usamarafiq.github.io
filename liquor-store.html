@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Liquor Store — Case Study · Usama Rafiq</title>
+<meta name="description" content="On-Demand Liquor Delivery — an iOS project by Usama Rafiq."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0b0a;--ink-2:#0f110e;--surface:#14160f;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.14);--txt:#c9cec4;--txt-dim:#878d82;--head:#f3f6ef;--acc:#8add09;--acc-ink:#0a0b0a;--disp:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;--max:1080px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--txt);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--disp);color:var(--head);font-weight:600;letter-spacing:-.02em;line-height:1.05}
+.acc{color:var(--acc)}
+.csnav{position:sticky;top:0;z-index:40;background:rgba(10,11,10,.55);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border-bottom:1px solid var(--line-2);box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.csnav .in{max-width:var(--max);margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}
+.mark{width:34px;height:34px;border-radius:50%;position:relative;display:grid;place-items:center;border:2px solid var(--acc)}
+.mark::after{content:"";position:absolute;top:2px;right:3px;width:5px;height:5px;border-radius:50%;background:var(--acc)}
+.mark span{font-family:var(--disp);font-weight:700;font-size:12px;color:var(--head)}
+.brand b{font-family:var(--disp);font-weight:600;color:var(--head);font-size:15px}
+.back{font-family:var(--mono);font-size:12px;color:var(--txt-dim);letter-spacing:.05em;transition:color .2s}
+.back:hover{color:var(--acc)}
+.hero{padding:60px 0 40px}
+.hero .meta{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:22px}
+.title-row{display:flex;align-items:center;gap:22px;margin-bottom:18px}
+.title-row img{width:82px;height:82px;border-radius:19px;background:#fff;border:1px solid var(--line-2);flex:none}
+.hero h1{font-size:clamp(40px,7vw,74px)}
+.hero .sub{font-size:19px;color:var(--txt);max-width:52ch;margin-bottom:24px}
+.roles{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.roles span{font-family:var(--mono);font-size:11px;color:var(--txt-dim);border:1px solid var(--line);border-radius:100px;padding:6px 13px}
+.badges{display:flex;flex-wrap:wrap;gap:10px}
+.badges span{font-family:var(--disp);font-weight:600;font-size:14px;color:var(--head);border:1px solid rgba(138,221,9,.35);border-radius:12px;padding:9px 15px;background:rgba(138,221,9,.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.sec{padding:44px 0;border-top:1px solid var(--line)}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-dim);margin-bottom:26px;display:flex;align-items:center;gap:12px}
+.label i{width:22px;height:1px;background:var(--acc)}
+.ov{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:start}
+.ov p{font-size:17px;color:var(--txt);margin-bottom:20px}
+.ov .st{display:inline-flex;align-items:center;gap:7px;font-family:var(--disp);font-weight:600;font-size:14px;color:var(--acc)}
+.ov .st svg{width:15px;height:15px}
+.dt{border-top:1px solid var(--line)}
+.dt .r{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.dt .r span:first-child{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-dim)}
+.dt .r span:last-child{color:var(--head);font-weight:500;text-align:right}
+.hl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.hl .c{border:1px solid var(--line-2);border-radius:16px;padding:24px;background:rgba(255,255,255,.035);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.09)}
+.hl .n{font-family:var(--mono);font-size:12px;color:var(--acc);margin-bottom:14px}
+.hl h3{font-size:18px;margin-bottom:10px}
+.hl p{font-size:14px;color:var(--txt-dim);line-height:1.6}
+.res{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line-2);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.028);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.res .s{padding:30px 24px;border-right:1px solid var(--line)}
+.res .s:last-child{border-right:none}
+.res .s b{font-family:var(--disp);font-weight:700;font-size:36px;color:var(--head);display:block;letter-spacing:-.02em}
+.res .s small{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-dim)}
+.cta{padding:60px 0;border-top:1px solid var(--line);text-align:center}
+.cta h2{font-size:clamp(26px,4vw,40px);margin-bottom:22px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;transition:transform .18s,background .2s;background:var(--acc);color:var(--acc-ink)}
+.btn:active{transform:translateY(1px)}
+.btn.o{background:transparent;border:1px solid var(--line-2);color:var(--head);margin-left:10px}
+.ft{border-top:1px solid var(--line);padding:34px 0;text-align:center}
+.ft p{font-size:13px;color:var(--txt-dim)}
+@media(max-width:760px){.ov{grid-template-columns:1fr;gap:28px}.hl{grid-template-columns:1fr}.res{grid-template-columns:1fr}.res .s{border-right:none;border-bottom:1px solid var(--line)}.title-row img{width:64px;height:64px}}
+</style></head><body>
+<nav class="csnav"><div class="in">
+  <a href="../index.html#home" class="brand"><span class="mark"><span>UR</span></span><b>Usama Rafiq</b></a>
+  <a class="back" href="../index.html#work">← All work</a>
+</div></nav>
+<header class="hero"><div class="wrap">
+  <div class="meta">On-demand · Delivery · 2024</div>
+  <div class="title-row"><img src="data:image/jpeg;base64,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cWfJI/TOWm71ZrbiGx1dlvFK2roKyMxzRO4bw6COIIOhBHIQFmTZb92uLNB/ykfpnLVejv3T5lRnGt2UbJLVvkosX1sMBPWRzUccrmjub28NfMo7ivZpocM4MvGIo8WS1L7bSvqRCaBjA/dGumoedO+tYaO/dPmUNzV63JzF5d1o9a5hqeHMgrbZb7W958an0LFfSobZb7W958an0LFfKAiIqCIiAiIgIiICIiAiIgKLY+wVb8f4NqcO3CV1PvubLBUMGroJW9i7TnHEgjnBKlKIMnw5IZ3WWM2+yYuiioI3Extp7tNAzieUM061fr7Eu0J8M3/T034LVaKDKnsS7Qnwzf8AT034J7Eu0J8M3/T034LVaIMqexLtCDj+Wb/p6b8FFcCXyXJjOe5DHVJVPlNPJTzvp/0riXlr2yjXTfa7Tl6egraq4GI8GYUxcyJmJbBR3PqPCN8zOvYO4HDRwHRrogqS6Z85M3vqfrzY6y5dS7D1XaY5dzvbzjoub7LOz58Cm/QMP4qyfYSyp+BNF/PL/mnsJZU/Ami/nl/zQVt7LOz58Cm/QMP4rt/nI5ZUNsMFtt91a2GMiGmjoWxM5ODRo7Ro16FLvYSyp+BNF/PL/mvpuSeVTXBwwTQkg68XSEeYvQZXy3wHmViimuF6wRXOtUHVOoyz+rX0omPZFoLR1wbqNe4Sp97Eu0J8M3/T034LUdFQ0VtoYaC3UkNHSQN3Y4IGBjGDuADgF6EGVPYl2hPhm/6em/BflNkhndeoxb73i6KWgkcDI2ou007OB5SzTrlrBEEWwDgq34AwbTYdt8rqjcc6WeoeNHTyu7J2nMOAAHMAFKURUEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf/Z" alt="Liquor Store logo"/><h1>Liquor Store</h1></div>
+  <p class="sub">On-Demand Liquor Delivery</p>
+  <div class="roles"><span>iOS Development</span><span>Swift</span><span>Delivery Tracking</span></div>
+  <div class="badges"><span>iOS · Android</span><span>On-demand</span><span>Age-verified</span></div>
+</div></header>
+<section class="sec"><div class="wrap">
+  <div class="label"><i></i>Overview</div>
+  <div class="ov">
+    <div><p>Liquor Store is an on-demand alcohol delivery app — browse, order, verify age, and track delivery to your door or hotel room. Built for iOS and Android, I developed the iOS experience.</p></div>
+    <div class="dt"><div class="r"><span>Sector</span><span>On-demand delivery</span></div><div class="r"><span>Platform</span><span>iOS · Android</span></div><div class="r"><span>Year</span><span>2024</span></div><div class="r"><span>My role</span><span>iOS Development</span></div></div>
+  </div>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="label"><i></i>Highlights</div>
+  <div class="hl"><div class="c"><div class="n">01</div><h3>Browse & order</h3><p>A clean storefront to browse and order in a few taps.</p></div><div class="c"><div class="n">02</div><h3>Age verification</h3><p>Compliant age checks built into checkout.</p></div><div class="c"><div class="n">03</div><h3>Live tracking</h3><p>Track delivery all the way to your door or hotel room.</p></div></div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <h2>Want something like Liquor Store?</h2>
+  <a class="btn" href="../index.html#contact">Start a conversation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  <a class="btn o" href="../index.html#work">← Back to all work</a>
+</div></section>
+<footer class="ft"><div class="wrap"><p>© 2026 Usama Rafiq · iOS Developer</p></div></footer>
+</body></html>

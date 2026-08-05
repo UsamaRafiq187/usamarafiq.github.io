@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Lillly — Case Study · Usama Rafiq</title>
+<meta name="description" content="Blind Dating, Nearby — an iOS project by Usama Rafiq."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0b0a;--ink-2:#0f110e;--surface:#14160f;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.14);--txt:#c9cec4;--txt-dim:#878d82;--head:#f3f6ef;--acc:#8add09;--acc-ink:#0a0b0a;--disp:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;--max:1080px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--txt);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--disp);color:var(--head);font-weight:600;letter-spacing:-.02em;line-height:1.05}
+.acc{color:var(--acc)}
+.csnav{position:sticky;top:0;z-index:40;background:rgba(10,11,10,.55);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border-bottom:1px solid var(--line-2);box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.csnav .in{max-width:var(--max);margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}
+.mark{width:34px;height:34px;border-radius:50%;position:relative;display:grid;place-items:center;border:2px solid var(--acc)}
+.mark::after{content:"";position:absolute;top:2px;right:3px;width:5px;height:5px;border-radius:50%;background:var(--acc)}
+.mark span{font-family:var(--disp);font-weight:700;font-size:12px;color:var(--head)}
+.brand b{font-family:var(--disp);font-weight:600;color:var(--head);font-size:15px}
+.back{font-family:var(--mono);font-size:12px;color:var(--txt-dim);letter-spacing:.05em;transition:color .2s}
+.back:hover{color:var(--acc)}
+.hero{padding:60px 0 40px}
+.hero .meta{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:22px}
+.title-row{display:flex;align-items:center;gap:22px;margin-bottom:18px}
+.title-row img{width:82px;height:82px;border-radius:19px;background:#fff;border:1px solid var(--line-2);flex:none}
+.hero h1{font-size:clamp(40px,7vw,74px)}
+.hero .sub{font-size:19px;color:var(--txt);max-width:52ch;margin-bottom:24px}
+.roles{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.roles span{font-family:var(--mono);font-size:11px;color:var(--txt-dim);border:1px solid var(--line);border-radius:100px;padding:6px 13px}
+.badges{display:flex;flex-wrap:wrap;gap:10px}
+.badges span{font-family:var(--disp);font-weight:600;font-size:14px;color:var(--head);border:1px solid rgba(138,221,9,.35);border-radius:12px;padding:9px 15px;background:rgba(138,221,9,.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.sec{padding:44px 0;border-top:1px solid var(--line)}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-dim);margin-bottom:26px;display:flex;align-items:center;gap:12px}
+.label i{width:22px;height:1px;background:var(--acc)}
+.ov{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:start}
+.ov p{font-size:17px;color:var(--txt);margin-bottom:20px}
+.ov .st{display:inline-flex;align-items:center;gap:7px;font-family:var(--disp);font-weight:600;font-size:14px;color:var(--acc)}
+.ov .st svg{width:15px;height:15px}
+.dt{border-top:1px solid var(--line)}
+.dt .r{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.dt .r span:first-child{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-dim)}
+.dt .r span:last-child{color:var(--head);font-weight:500;text-align:right}
+.hl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.hl .c{border:1px solid var(--line-2);border-radius:16px;padding:24px;background:rgba(255,255,255,.035);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.09)}
+.hl .n{font-family:var(--mono);font-size:12px;color:var(--acc);margin-bottom:14px}
+.hl h3{font-size:18px;margin-bottom:10px}
+.hl p{font-size:14px;color:var(--txt-dim);line-height:1.6}
+.res{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line-2);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.028);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.res .s{padding:30px 24px;border-right:1px solid var(--line)}
+.res .s:last-child{border-right:none}
+.res .s b{font-family:var(--disp);font-weight:700;font-size:36px;color:var(--head);display:block;letter-spacing:-.02em}
+.res .s small{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-dim)}
+.cta{padding:60px 0;border-top:1px solid var(--line);text-align:center}
+.cta h2{font-size:clamp(26px,4vw,40px);margin-bottom:22px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;transition:transform .18s,background .2s;background:var(--acc);color:var(--acc-ink)}
+.btn:active{transform:translateY(1px)}
+.btn.o{background:transparent;border:1px solid var(--line-2);color:var(--head);margin-left:10px}
+.ft{border-top:1px solid var(--line);padding:34px 0;text-align:center}
+.ft p{font-size:13px;color:var(--txt-dim)}
+@media(max-width:760px){.ov{grid-template-columns:1fr;gap:28px}.hl{grid-template-columns:1fr}.res{grid-template-columns:1fr}.res .s{border-right:none;border-bottom:1px solid var(--line)}.title-row img{width:64px;height:64px}}
+</style></head><body>
+<nav class="csnav"><div class="in">
+  <a href="../index.html#home" class="brand"><span class="mark"><span>UR</span></span><b>Usama Rafiq</b></a>
+  <a class="back" href="../index.html#work">← All work</a>
+</div></nav>
+<header class="hero"><div class="wrap">
+  <div class="meta">Social · Dating · 2024</div>
+  <div class="title-row"><img src="data:image/jpeg;base64,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" alt="Lillly logo"/><h1>Lillly</h1></div>
+  <p class="sub">Blind Dating, Nearby</p>
+  <div class="roles"><span>iOS Development</span><span>Swift · SwiftUI</span><span>Realtime Chat</span></div>
+  <div class="badges"><span>iOS · Android</span><span>5 km radius</span><span>Social</span></div>
+</div></header>
+<section class="sec"><div class="wrap">
+  <div class="label"><i></i>Overview</div>
+  <div class="ov">
+    <div><p>Lillly is a social app for making real connections — blind dating within a 5 km radius, with no photos so people connect before appearance. Discovery and messaging are designed to feel warm, not transactional. Built for iOS and Android, I developed the iOS experience.</p></div>
+    <div class="dt"><div class="r"><span>Sector</span><span>Social</span></div><div class="r"><span>Platform</span><span>iOS · Android</span></div><div class="r"><span>Year</span><span>2024</span></div><div class="r"><span>My role</span><span>iOS Development</span></div></div>
+  </div>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="label"><i></i>Highlights</div>
+  <div class="hl"><div class="c"><div class="n">01</div><h3>Nearby discovery</h3><p>Matches within a 5 km radius, so connections are real and local.</p></div><div class="c"><div class="n">02</div><h3>No photos, first</h3><p>Connection before appearance — profiles that lead with personality.</p></div><div class="c"><div class="n">03</div><h3>Warm messaging</h3><p>Discovery and chat designed to feel human, not transactional.</p></div></div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <h2>Want something like Lillly?</h2>
+  <a class="btn" href="../index.html#contact">Start a conversation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  <a class="btn o" href="../index.html#work">← Back to all work</a>
+</div></section>
+<footer class="ft"><div class="wrap"><p>© 2026 Usama Rafiq · iOS Developer</p></div></footer>
+</body></html>

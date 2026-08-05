@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Shine n Go — Case Study · Usama Rafiq</title>
+<meta name="description" content="Car Wash at Your Doorstep — an iOS project by Usama Rafiq."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0b0a;--ink-2:#0f110e;--surface:#14160f;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.14);--txt:#c9cec4;--txt-dim:#878d82;--head:#f3f6ef;--acc:#8add09;--acc-ink:#0a0b0a;--disp:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;--max:1080px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--txt);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--disp);color:var(--head);font-weight:600;letter-spacing:-.02em;line-height:1.05}
+.acc{color:var(--acc)}
+.csnav{position:sticky;top:0;z-index:40;background:rgba(10,11,10,.55);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border-bottom:1px solid var(--line-2);box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.csnav .in{max-width:var(--max);margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}
+.mark{width:34px;height:34px;border-radius:50%;position:relative;display:grid;place-items:center;border:2px solid var(--acc)}
+.mark::after{content:"";position:absolute;top:2px;right:3px;width:5px;height:5px;border-radius:50%;background:var(--acc)}
+.mark span{font-family:var(--disp);font-weight:700;font-size:12px;color:var(--head)}
+.brand b{font-family:var(--disp);font-weight:600;color:var(--head);font-size:15px}
+.back{font-family:var(--mono);font-size:12px;color:var(--txt-dim);letter-spacing:.05em;transition:color .2s}
+.back:hover{color:var(--acc)}
+.hero{padding:60px 0 40px}
+.hero .meta{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:22px}
+.title-row{display:flex;align-items:center;gap:22px;margin-bottom:18px}
+.title-row img{width:82px;height:82px;border-radius:19px;background:#fff;border:1px solid var(--line-2);flex:none}
+.hero h1{font-size:clamp(40px,7vw,74px)}
+.hero .sub{font-size:19px;color:var(--txt);max-width:52ch;margin-bottom:24px}
+.roles{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.roles span{font-family:var(--mono);font-size:11px;color:var(--txt-dim);border:1px solid var(--line);border-radius:100px;padding:6px 13px}
+.badges{display:flex;flex-wrap:wrap;gap:10px}
+.badges span{font-family:var(--disp);font-weight:600;font-size:14px;color:var(--head);border:1px solid rgba(138,221,9,.35);border-radius:12px;padding:9px 15px;background:rgba(138,221,9,.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.sec{padding:44px 0;border-top:1px solid var(--line)}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-dim);margin-bottom:26px;display:flex;align-items:center;gap:12px}
+.label i{width:22px;height:1px;background:var(--acc)}
+.ov{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:start}
+.ov p{font-size:17px;color:var(--txt);margin-bottom:20px}
+.ov .st{display:inline-flex;align-items:center;gap:7px;font-family:var(--disp);font-weight:600;font-size:14px;color:var(--acc)}
+.ov .st svg{width:15px;height:15px}
+.dt{border-top:1px solid var(--line)}
+.dt .r{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.dt .r span:first-child{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-dim)}
+.dt .r span:last-child{color:var(--head);font-weight:500;text-align:right}
+.hl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.hl .c{border:1px solid var(--line-2);border-radius:16px;padding:24px;background:rgba(255,255,255,.035);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.09)}
+.hl .n{font-family:var(--mono);font-size:12px;color:var(--acc);margin-bottom:14px}
+.hl h3{font-size:18px;margin-bottom:10px}
+.hl p{font-size:14px;color:var(--txt-dim);line-height:1.6}
+.res{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line-2);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.028);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.res .s{padding:30px 24px;border-right:1px solid var(--line)}
+.res .s:last-child{border-right:none}
+.res .s b{font-family:var(--disp);font-weight:700;font-size:36px;color:var(--head);display:block;letter-spacing:-.02em}
+.res .s small{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-dim)}
+.cta{padding:60px 0;border-top:1px solid var(--line);text-align:center}
+.cta h2{font-size:clamp(26px,4vw,40px);margin-bottom:22px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;transition:transform .18s,background .2s;background:var(--acc);color:var(--acc-ink)}
+.btn:active{transform:translateY(1px)}
+.btn.o{background:transparent;border:1px solid var(--line-2);color:var(--head);margin-left:10px}
+.ft{border-top:1px solid var(--line);padding:34px 0;text-align:center}
+.ft p{font-size:13px;color:var(--txt-dim)}
+@media(max-width:760px){.ov{grid-template-columns:1fr;gap:28px}.hl{grid-template-columns:1fr}.res{grid-template-columns:1fr}.res .s{border-right:none;border-bottom:1px solid var(--line)}.title-row img{width:64px;height:64px}}
+</style></head><body>
+<nav class="csnav"><div class="in">
+  <a href="../index.html#home" class="brand"><span class="mark"><span>UR</span></span><b>Usama Rafiq</b></a>
+  <a class="back" href="../index.html#work">← All work</a>
+</div></nav>
+<header class="hero"><div class="wrap">
+  <div class="meta">On-demand · Auto · 2024</div>
+  <div class="title-row"><img src="data:image/jpeg;base64,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" alt="Shine n Go logo"/><h1>Shine n Go</h1></div>
+  <p class="sub">Car Wash at Your Doorstep</p>
+  <div class="roles"><span>iOS Development</span><span>Swift</span><span>Booking</span></div>
+  <div class="badges"><span>iOS · Android</span><span>On-demand</span><span>Booking</span></div>
+</div></header>
+<section class="sec"><div class="wrap">
+  <div class="label"><i></i>Overview</div>
+  <div class="ov">
+    <div><p>Shine n Go brings the car wash to you — book a professional detail at your doorstep in a few taps. It connects customers with local providers for discovery, booking and scheduling, on iOS and Android. I built the iOS app.</p></div>
+    <div class="dt"><div class="r"><span>Sector</span><span>On-demand services</span></div><div class="r"><span>Platform</span><span>iOS · Android</span></div><div class="r"><span>Year</span><span>2024</span></div><div class="r"><span>My role</span><span>iOS Development</span></div></div>
+  </div>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="label"><i></i>Highlights</div>
+  <div class="hl"><div class="c"><div class="n">01</div><h3>At your doorstep</h3><p>A professional car wash and detail that comes to you — no queue, no drive.</p></div><div class="c"><div class="n">02</div><h3>Book in a few taps</h3><p>Pick a service, a time and a place; the rest is handled.</p></div><div class="c"><div class="n">03</div><h3>Provider marketplace</h3><p>Discovery, booking and messaging that connect customers with trusted local providers.</p></div></div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <h2>Want something like Shine n Go?</h2>
+  <a class="btn" href="../index.html#contact">Start a conversation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  <a class="btn o" href="../index.html#work">← Back to all work</a>
+</div></section>
+<footer class="ft"><div class="wrap"><p>© 2026 Usama Rafiq · iOS Developer</p></div></footer>
+</body></html>

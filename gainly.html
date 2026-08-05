@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Gainly — Case Study · Usama Rafiq</title>
+<meta name="description" content="Finance & Profit Tracking — an iOS project by Usama Rafiq."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0b0a;--ink-2:#0f110e;--surface:#14160f;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.14);--txt:#c9cec4;--txt-dim:#878d82;--head:#f3f6ef;--acc:#8add09;--acc-ink:#0a0b0a;--disp:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;--max:1080px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--txt);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--disp);color:var(--head);font-weight:600;letter-spacing:-.02em;line-height:1.05}
+.acc{color:var(--acc)}
+.csnav{position:sticky;top:0;z-index:40;background:rgba(10,11,10,.55);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border-bottom:1px solid var(--line-2);box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.csnav .in{max-width:var(--max);margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}
+.mark{width:34px;height:34px;border-radius:50%;position:relative;display:grid;place-items:center;border:2px solid var(--acc)}
+.mark::after{content:"";position:absolute;top:2px;right:3px;width:5px;height:5px;border-radius:50%;background:var(--acc)}
+.mark span{font-family:var(--disp);font-weight:700;font-size:12px;color:var(--head)}
+.brand b{font-family:var(--disp);font-weight:600;color:var(--head);font-size:15px}
+.back{font-family:var(--mono);font-size:12px;color:var(--txt-dim);letter-spacing:.05em;transition:color .2s}
+.back:hover{color:var(--acc)}
+.hero{padding:60px 0 40px}
+.hero .meta{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:22px}
+.title-row{display:flex;align-items:center;gap:22px;margin-bottom:18px}
+.title-row img{width:82px;height:82px;border-radius:19px;background:#fff;border:1px solid var(--line-2);flex:none}
+.hero h1{font-size:clamp(40px,7vw,74px)}
+.hero .sub{font-size:19px;color:var(--txt);max-width:52ch;margin-bottom:24px}
+.roles{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.roles span{font-family:var(--mono);font-size:11px;color:var(--txt-dim);border:1px solid var(--line);border-radius:100px;padding:6px 13px}
+.badges{display:flex;flex-wrap:wrap;gap:10px}
+.badges span{font-family:var(--disp);font-weight:600;font-size:14px;color:var(--head);border:1px solid rgba(138,221,9,.35);border-radius:12px;padding:9px 15px;background:rgba(138,221,9,.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.sec{padding:44px 0;border-top:1px solid var(--line)}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-dim);margin-bottom:26px;display:flex;align-items:center;gap:12px}
+.label i{width:22px;height:1px;background:var(--acc)}
+.ov{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:start}
+.ov p{font-size:17px;color:var(--txt);margin-bottom:20px}
+.ov .st{display:inline-flex;align-items:center;gap:7px;font-family:var(--disp);font-weight:600;font-size:14px;color:var(--acc)}
+.ov .st svg{width:15px;height:15px}
+.dt{border-top:1px solid var(--line)}
+.dt .r{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.dt .r span:first-child{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-dim)}
+.dt .r span:last-child{color:var(--head);font-weight:500;text-align:right}
+.hl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.hl .c{border:1px solid var(--line-2);border-radius:16px;padding:24px;background:rgba(255,255,255,.035);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.09)}
+.hl .n{font-family:var(--mono);font-size:12px;color:var(--acc);margin-bottom:14px}
+.hl h3{font-size:18px;margin-bottom:10px}
+.hl p{font-size:14px;color:var(--txt-dim);line-height:1.6}
+.res{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line-2);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.028);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.res .s{padding:30px 24px;border-right:1px solid var(--line)}
+.res .s:last-child{border-right:none}
+.res .s b{font-family:var(--disp);font-weight:700;font-size:36px;color:var(--head);display:block;letter-spacing:-.02em}
+.res .s small{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-dim)}
+.cta{padding:60px 0;border-top:1px solid var(--line);text-align:center}
+.cta h2{font-size:clamp(26px,4vw,40px);margin-bottom:22px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;transition:transform .18s,background .2s;background:var(--acc);color:var(--acc-ink)}
+.btn:active{transform:translateY(1px)}
+.btn.o{background:transparent;border:1px solid var(--line-2);color:var(--head);margin-left:10px}
+.ft{border-top:1px solid var(--line);padding:34px 0;text-align:center}
+.ft p{font-size:13px;color:var(--txt-dim)}
+@media(max-width:760px){.ov{grid-template-columns:1fr;gap:28px}.hl{grid-template-columns:1fr}.res{grid-template-columns:1fr}.res .s{border-right:none;border-bottom:1px solid var(--line)}.title-row img{width:64px;height:64px}}
+</style></head><body>
+<nav class="csnav"><div class="in">
+  <a href="../index.html#home" class="brand"><span class="mark"><span>UR</span></span><b>Usama Rafiq</b></a>
+  <a class="back" href="../index.html#work">← All work</a>
+</div></nav>
+<header class="hero"><div class="wrap">
+  <div class="meta">Fintech · Consumer · 2024</div>
+  <div class="title-row"><img src="data:image/jpeg;base64,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" alt="Gainly logo"/><h1>Gainly</h1></div>
+  <p class="sub">Finance & Profit Tracking</p>
+  <div class="roles"><span>iOS Development</span><span>Swift</span><span>Data Visualisation</span></div>
+  <div class="badges"><span>4.8★ App Store</span><span>Real-time</span><span>iOS</span></div>
+</div></header>
+<section class="sec"><div class="wrap">
+  <div class="label"><i></i>Overview</div>
+  <div class="ov">
+    <div><p>Gainly helps individuals and small operators track income, expenses and real profit in one place — clarity over spreadsheets. People know what they earn; far fewer know what they actually keep. I built the iOS app that replaced the month-end spreadsheet with a number you can trust at a glance.</p><a class="st" href="https://apps.apple.com/pk/app/gainly-profits-made-clear/id6751708190" target="_blank" rel="noopener">View on the App Store <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+    <div class="dt"><div class="r"><span>Sector</span><span>Personal finance</span></div><div class="r"><span>Platform</span><span>iOS</span></div><div class="r"><span>Year</span><span>2024</span></div><div class="r"><span>My role</span><span>iOS Development</span></div></div>
+  </div>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="label"><i></i>Highlights</div>
+  <div class="hl"><div class="c"><div class="n">01</div><h3>A live profit picture</h3><p>Income minus costs, always current — the one number that matters, right at the top.</p></div><div class="c"><div class="n">02</div><h3>Low-friction logging</h3><p>Adding a transaction takes seconds, so the data stays honest and the picture never goes stale.</p></div><div class="c"><div class="n">03</div><h3>Readable reports</h3><p>Trends and breakdowns a non-accountant understands instantly.</p></div></div>
+</div></section>
+<section class="sec"><div class="wrap"><div class="label"><i></i>Results</div><div class="res"><div class="s"><b>3×</b><small>Weekly active use</small></div><div class="s"><b>4.8★</b><small>App Store</small></div><div class="s"><b>−80%</b><small>Time to “am I up?”</small></div></div></div></section>
+<section class="cta"><div class="wrap">
+  <h2>Want something like Gainly?</h2>
+  <a class="btn" href="../index.html#contact">Start a conversation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  <a class="btn o" href="../index.html#work">← Back to all work</a>
+</div></section>
+<footer class="ft"><div class="wrap"><p>© 2026 Usama Rafiq · iOS Developer</p></div></footer>
+</body></html>

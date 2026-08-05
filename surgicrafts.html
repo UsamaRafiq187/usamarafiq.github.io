@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Surgicrafts — Case Study · Usama Rafiq</title>
+<meta name="description" content="Surgical Instruments Store — an iOS project by Usama Rafiq."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0b0a;--ink-2:#0f110e;--surface:#14160f;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.14);--txt:#c9cec4;--txt-dim:#878d82;--head:#f3f6ef;--acc:#8add09;--acc-ink:#0a0b0a;--disp:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;--max:1080px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--txt);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--disp);color:var(--head);font-weight:600;letter-spacing:-.02em;line-height:1.05}
+.acc{color:var(--acc)}
+.csnav{position:sticky;top:0;z-index:40;background:rgba(10,11,10,.55);backdrop-filter:blur(20px) saturate(1.5);-webkit-backdrop-filter:blur(20px) saturate(1.5);border-bottom:1px solid var(--line-2);box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.csnav .in{max-width:var(--max);margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}
+.mark{width:34px;height:34px;border-radius:50%;position:relative;display:grid;place-items:center;border:2px solid var(--acc)}
+.mark::after{content:"";position:absolute;top:2px;right:3px;width:5px;height:5px;border-radius:50%;background:var(--acc)}
+.mark span{font-family:var(--disp);font-weight:700;font-size:12px;color:var(--head)}
+.brand b{font-family:var(--disp);font-weight:600;color:var(--head);font-size:15px}
+.back{font-family:var(--mono);font-size:12px;color:var(--txt-dim);letter-spacing:.05em;transition:color .2s}
+.back:hover{color:var(--acc)}
+.hero{padding:60px 0 40px}
+.hero .meta{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:22px}
+.title-row{display:flex;align-items:center;gap:22px;margin-bottom:18px}
+.title-row img{width:82px;height:82px;border-radius:19px;background:#fff;border:1px solid var(--line-2);flex:none}
+.hero h1{font-size:clamp(40px,7vw,74px)}
+.hero .sub{font-size:19px;color:var(--txt);max-width:52ch;margin-bottom:24px}
+.roles{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.roles span{font-family:var(--mono);font-size:11px;color:var(--txt-dim);border:1px solid var(--line);border-radius:100px;padding:6px 13px}
+.badges{display:flex;flex-wrap:wrap;gap:10px}
+.badges span{font-family:var(--disp);font-weight:600;font-size:14px;color:var(--head);border:1px solid rgba(138,221,9,.35);border-radius:12px;padding:9px 15px;background:rgba(138,221,9,.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.sec{padding:44px 0;border-top:1px solid var(--line)}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-dim);margin-bottom:26px;display:flex;align-items:center;gap:12px}
+.label i{width:22px;height:1px;background:var(--acc)}
+.ov{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:start}
+.ov p{font-size:17px;color:var(--txt);margin-bottom:20px}
+.ov .st{display:inline-flex;align-items:center;gap:7px;font-family:var(--disp);font-weight:600;font-size:14px;color:var(--acc)}
+.ov .st svg{width:15px;height:15px}
+.dt{border-top:1px solid var(--line)}
+.dt .r{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.dt .r span:first-child{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-dim)}
+.dt .r span:last-child{color:var(--head);font-weight:500;text-align:right}
+.hl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.hl .c{border:1px solid var(--line-2);border-radius:16px;padding:24px;background:rgba(255,255,255,.035);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.09)}
+.hl .n{font-family:var(--mono);font-size:12px;color:var(--acc);margin-bottom:14px}
+.hl h3{font-size:18px;margin-bottom:10px}
+.hl p{font-size:14px;color:var(--txt-dim);line-height:1.6}
+.res{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line-2);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.028);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.res .s{padding:30px 24px;border-right:1px solid var(--line)}
+.res .s:last-child{border-right:none}
+.res .s b{font-family:var(--disp);font-weight:700;font-size:36px;color:var(--head);display:block;letter-spacing:-.02em}
+.res .s small{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-dim)}
+.cta{padding:60px 0;border-top:1px solid var(--line);text-align:center}
+.cta h2{font-size:clamp(26px,4vw,40px);margin-bottom:22px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:600;font-size:15px;padding:14px 24px;border-radius:12px;transition:transform .18s,background .2s;background:var(--acc);color:var(--acc-ink)}
+.btn:active{transform:translateY(1px)}
+.btn.o{background:transparent;border:1px solid var(--line-2);color:var(--head);margin-left:10px}
+.ft{border-top:1px solid var(--line);padding:34px 0;text-align:center}
+.ft p{font-size:13px;color:var(--txt-dim)}
+@media(max-width:760px){.ov{grid-template-columns:1fr;gap:28px}.hl{grid-template-columns:1fr}.res{grid-template-columns:1fr}.res .s{border-right:none;border-bottom:1px solid var(--line)}.title-row img{width:64px;height:64px}}
+</style></head><body>
+<nav class="csnav"><div class="in">
+  <a href="../index.html#home" class="brand"><span class="mark"><span>UR</span></span><b>Usama Rafiq</b></a>
+  <a class="back" href="../index.html#work">← All work</a>
+</div></nav>
+<header class="hero"><div class="wrap">
+  <div class="meta">Healthcare · B2B · 2023</div>
+  <div class="title-row"><img src="data:image/jpeg;base64,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GKhsD5A8wytfoaI/SHTX7WlnbeInGAVpo6qtt1HL7Ga5vjQRAPiBA2CNjrvfy69lw55T8UbraXU+UXijfQw+LO2KFnhNlEUfPzdG7JI3yg+hOum1dGyMa5RjzNYxh4wc2zTW3auq651QkpJ5i5ZaXVdnkxs918RFxj6EEREAREQBERAEREAREQBERAEREAREQHaorhX22Z01vrJqSV7DG58Ly1xae42FPHiBmLqF9Ib/AFZY9j2Of4h53czg4ku3vfugb/R6Kropqco7JlFmnqseZxTfmiZdlWTPqHVD7/Xumcdl5ncSepPf5k/eV2K7NMmuNPQxVd2nkfROldFMXHxSZBpxc/ez0Gvkq8ic8umTHs1OU+RbeS+X2Jv+VuUeGY/5Q3DlPceO7qv03McrbI2RuR3EPYAGkVDvd1vWvTufvUEic8u5n2an8i9ESpyO/meOc3msMsfPyPMx5m852/R+J6ldhmYZXFrw8juLdDQ1UO7b3r71BIsc8u4enqfWC9ETL8ovs1FVUlTcpqmOqh9neZ3F5DOZri0E9tljd+ugvgynJAGgX6vAZrl1O73dDQ16aACh0Tnl3M+BV+VeiO/NebtUT+PPcqiWXwjBzueSfDPdn9n4LkmyG+1LJGVF4rJWyF7ntfKSHFzeV3T4t6fJRiJzPuZ8Kv8AKvQIiKJaEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREB//9k=" alt="Surgicrafts logo"/><h1>Surgicrafts</h1></div>
+  <p class="sub">Surgical Instruments Store</p>
+  <div class="roles"><span>iOS Development</span><span>Swift</span><span>Catalogue & Ordering</span></div>
+  <div class="badges"><span>iOS · Web</span><span>B2B</span><span>Since 1961</span></div>
+</div></header>
+<section class="sec"><div class="wrap">
+  <div class="label"><i></i>Overview</div>
+  <div class="ov">
+    <div><p>Surgicrafts is a mobile storefront for a surgical-instruments manufacturer supporting the healthcare industry since 1961 — catalogue, ordering and reorder for clinical buyers. Built for iOS and web, I developed the iOS app.</p></div>
+    <div class="dt"><div class="r"><span>Sector</span><span>Medical · B2B</span></div><div class="r"><span>Platform</span><span>iOS · Web</span></div><div class="r"><span>Year</span><span>2023</span></div><div class="r"><span>My role</span><span>iOS Development</span></div></div>
+  </div>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="label"><i></i>Highlights</div>
+  <div class="hl"><div class="c"><div class="n">01</div><h3>Full catalogue</h3><p>The manufacturer's surgical-instruments range, browsable on mobile.</p></div><div class="c"><div class="n">02</div><h3>Ordering & reorder</h3><p>Fast ordering and one-tap reorder built for busy clinical buyers.</p></div><div class="c"><div class="n">03</div><h3>Trusted heritage</h3><p>A storefront for a maker serving the healthcare industry since 1961.</p></div></div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <h2>Want something like Surgicrafts?</h2>
+  <a class="btn" href="../index.html#contact">Start a conversation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  <a class="btn o" href="../index.html#work">← Back to all work</a>
+</div></section>
+<footer class="ft"><div class="wrap"><p>© 2026 Usama Rafiq · iOS Developer</p></div></footer>
+</body></html>
