@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Usama Rafiq — iOS Developer</title>
+  <meta name="description" content="Usama Rafiq — Senior iOS Developer. Native iOS apps from architecture to the App Store. Swift, SwiftUI & UIKit." />
+  <meta name="theme-color" content="#05080f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#work">Skip to the work</a>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="#top" aria-label="Usama Rafiq, back to the top">
+        <span class="mark">UR</span>
+        <b class="brand-name">Usama Rafiq</b>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#releases">Releases</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-p btn-sm" href="https://www.linkedin.com/in/usama-rafiq-ur420/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-lines" viewBox="0 0 1200 700" fill="none" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#7ec8ff" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="#8af5d8" stop-opacity="0.05"/>
+            </linearGradient>
+          </defs>
+          <path d="M-40 520 C 180 180, 420 620, 640 260 S 1040 40, 1280 280" stroke="url(#g1)" stroke-width="1.4"/>
+          <path d="M-20 580 C 220 240, 460 680, 700 320 S 1080 80, 1300 340" stroke="url(#g1)" stroke-width="1.2" opacity="0.7"/>
+          <path d="M0 640 C 260 300, 500 720, 760 380 S 1120 120, 1320 400" stroke="url(#g1)" stroke-width="1" opacity="0.45"/>
+        </svg>
+        <div class="blob blob-a"></div>
+        <div class="blob blob-b"></div>
+      </div>
+
+      <div class="wrap">
+        <div class="hero-meta">
+          <p class="hero-role">iOS Developer<i>/</i>Swift<i>/</i>UIKit</p>
+        </div>
+
+        <div class="stage" id="stage">
+          <h1 class="name">
+            <span class="sr">Usama Rafiq, iOS Developer</span>
+            <span class="name-line name-line-a" aria-hidden="true">
+              <span class="ch" style="--i:0">U</span><span class="ch" style="--i:1">S</span><span class="ch" style="--i:2">A</span><span class="ch" style="--i:3">M</span><span class="ch" style="--i:4">A</span>
+            </span>
+            <span class="name-line name-line-b" aria-hidden="true">
+              <span class="ch" style="--i:5">R</span><span class="ch" style="--i:6">A</span><span class="ch" style="--i:7">F</span><span class="ch" style="--i:8">I</span><span class="ch" style="--i:9">Q</span>
+            </span>
+          </h1>
+
+          <figure class="portrait">
+            <span class="halo" aria-hidden="true"></span>
+            <div class="portrait-in">
+              <div class="portrait-cut">
+                <img src="assets/portrait-cut.png" width="1075" height="1433" alt="Usama Rafiq in a black suit, white shirt and navy tie" fetchpriority="high" decoding="async" />
+              </div>
+            </div>
+          </figure>
+
+          <div class="hero-copy">
+            <p class="lead">
+              Senior iOS Developer at Rent FYV &amp; Codelps. For 5+ years I've turned rough ideas into polished, App&nbsp;Store-ready products — across car rental, fintech, connectivity, and e-commerce.
+            </p>
+            <div class="cta">
+              <a class="btn btn-p" href="#work">View selected work ↓</a>
+              <a class="btn btn-o" href="#contact">Get in touch</a>
+            </div>
+          </div>
+
+          <dl class="plate">
+            <div><dt>Role</dt><dd>iOS Developer</dd></div>
+                        <div><dt>Experience</dt><dd>5+ years</dd></div>
+            <div><dt>Apps</dt><dd>60+ shipped</dd></div>
+            <div><dt>Based</dt><dd>Pakistan, UTC+5</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" id="marquee" aria-hidden="true">
+      <div class="mq" id="mq1"></div>
+      <div class="mq mq-rev" id="mq2"></div>
+    </div>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="sec-label">Selected work</p>
+            <h2>Apps people <em>actually install</em></h2>
+          </div>
+          <p>A cross-section of the apps I've shipped across mobility, commerce, fintech, healthcare and more. Open any card for details.</p>
+        </div>
+
+        <div class="filters" id="filters" role="toolbar" aria-label="Filter apps by category"></div>
+        <div class="work-grid" id="workGrid"></div>
+      </div>
+    </section>
+
+    <section id="releases">
+      <div class="wrap releases">
+        <div class="releases-intro">
+          <p class="sec-label">Release log</p>
+          <h2>First build to <em>the store</em></h2>
+          <p>Milestone releases across the apps I still ship and maintain — from first App Store build to what's next.</p>
+        </div>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-copy">
+          <p class="sec-label">About</p>
+          <h2>Five years on <em>one platform</em></h2>
+          <p>I'm Usama Rafiq, a Senior iOS Developer with <strong>5+ years</strong> of building apps that real customers install. I started at Codelps as an intern and grew into leading iOS delivery at Rent FYV and Codelps for founders across the US, UK and the Gulf.</p>
+          <p>Most of my work is Swift with UIKit and SwiftUI where they fit — bookings and payments for car rental, AI identity checks for operators, and right-to-left Urdu storefronts for wholesalers, plus the push, maps and analytics underneath.</p>
+          <p>I stay with an app after launch. Rent FYV, Insure Verify AI and Surgicrafts keep shipping updates long after day one.</p>
+
+          <div class="stack">
+            <div class="stack-row">
+              <h3>Language &amp; UI</h3>
+              <ul>
+                <li class="pill">Swift</li>
+                <li class="pill">UIKit</li>
+                <li class="pill">SwiftUI</li>
+                <li class="pill">Combine</li>
+                <li class="pill">async/await</li>
+                <li class="pill">MVVM</li>
+              </ul>
+            </div>
+            <div class="stack-row">
+              <h3>Apple frameworks</h3>
+              <ul>
+                <li class="pill">MapKit</li>
+                <li class="pill">Core Location</li>
+                <li class="pill">Core ML</li>
+                <li class="pill">StoreKit</li>
+                <li class="pill">PDFKit</li>
+                <li class="pill">Push notifications</li>
+              </ul>
+            </div>
+            <div class="stack-row">
+              <h3>Services</h3>
+              <ul>
+                <li class="pill">REST APIs</li>
+                <li class="pill">Firebase</li>
+                <li class="pill">Stripe / PayArc</li>
+                <li class="pill">Google Maps</li>
+                <li class="pill">WebSockets</li>
+                <li class="pill">Lottie</li>
+              </ul>
+            </div>
+            <div class="stack-row">
+              <h3>Shipping</h3>
+              <ul>
+                <li class="pill">Xcode</li>
+                <li class="pill">Git &amp; GitHub</li>
+                <li class="pill">TestFlight</li>
+                <li class="pill">App Store Connect</li>
+                <li class="pill">CocoaPods / SPM</li>
+                <li class="pill">Figma</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <div class="phone" id="phone">
+            <span class="phone-btn phone-btn--action" aria-hidden="true"></span>
+            <span class="phone-btn phone-btn--up" aria-hidden="true"></span>
+            <span class="phone-btn phone-btn--down" aria-hidden="true"></span>
+            <span class="phone-btn phone-btn--power" aria-hidden="true"></span>
+            <div class="phone-body">
+              <div class="phone-screen">
+                <div class="phone-status">
+                  <time id="phoneTime">9:41</time>
+                  <span class="phone-status-r" aria-hidden="true">
+                    <svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.4" width="3" height="6.6" rx="1"/><rect x="10" y="2.7" width="3" height="9.3" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+                    <svg viewBox="0 0 16 12"><path d="M1.2 4.4a9.6 9.6 0 0 1 13.6 0M3.7 7a6 6 0 0 1 8.6 0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="8" cy="10.1" r="1.5"/></svg>
+                    <svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="22" height="11" rx="3.4" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="19" height="8" rx="2.1"/><rect x="24" y="4" width="2.2" height="4" rx="1" opacity=".5"/></svg>
+                  </span>
+                </div>
+                <div class="phone-home" id="phoneHome">
+                  <a class="phone-widget" href="#work" aria-label="More than 60 apps shipped in over 5 years. See the work.">
+                    <span class="phone-widget-box">
+                      <span class="phone-widget-k">Shipped</span>
+                      <span class="phone-widget-n">60+</span>
+                      <span class="phone-widget-t">apps in 5+ years</span>
+                    </span>
+                    <span>Portfolio</span>
+                  </a>
+                </div>
+                <div class="phone-search" aria-hidden="true">
+                  <svg viewBox="0 0 12 12"><circle cx="5" cy="5" r="3.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m7.8 7.8 3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  Search
+                </div>
+                <div class="phone-dock" id="phoneDock"></div>
+                <div class="phone-folder" id="phoneFolder" hidden>
+                  <span class="phone-folder-title">More</span>
+                  <div class="phone-folder-box" id="phoneFolderBox"></div>
+                </div>
+                <span class="phone-bar" aria-hidden="true"></span>
+              </div>
+              <span class="phone-island" aria-hidden="true"></span>
+            </div>
+          </div>
+          <p class="phone-cap" id="phoneCap">One home screen of shipped work. Every icon opens.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="sec-label">Contact</p>
+        <h2 class="mega">Got an app <em>to ship?</em></h2>
+        <div class="contact-grid">
+          <div class="contact-main">
+            <p class="contact-sub">Tell me what you're building. Email and WhatsApp are the fastest ways to reach me.</p>
+            <div class="contact-row" id="contactActions"></div>
+            <ul class="socials" aria-label="Find me elsewhere">
+              <li>
+                <a class="btn btn-o btn-sm" href="https://www.linkedin.com/in/usama-rafiq-ur420/" target="_blank" rel="noopener">LinkedIn ↗</a>
+              </li>
+              <li>
+                <a class="btn btn-o btn-sm" href="mailto:usamarafiq187@gmail.com">Email</a>
+              </li>
+            </ul>
+          </div>
+          <div class="clock-card" aria-label="Usama's local time">
+            <span class="clock-label"><span class="pulse" aria-hidden="true"></span>My local time</span>
+            <time class="clock-time" id="localClock">--:--:--</time>
+            <span class="clock-zone">PKT, UTC+5. <span id="daypart">Daytime</span> in Pakistan.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <span>© <span id="year"></span> Usama Rafiq · iOS Developer</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <dialog class="sheet" id="sheet" aria-labelledby="sheetName">
+    <button class="sheet-x" id="sheetX" type="button" aria-label="Close">✕</button>
+    <div class="sheet-in" id="sheetIn">
+      <div class="sheet-hero">
+        <span class="sheet-aura" id="sheetAura" aria-hidden="true"></span>
+        <img class="sheet-icon" id="sheetIcon" src="" width="104" height="104" alt="" />
+        <div>
+          <p class="sheet-tag" id="sheetTag"></p>
+          <h2 class="sheet-name" id="sheetName"></h2>
+          <p class="sheet-sub" id="sheetSub"></p>
+        </div>
+        <div class="sheet-actions">
+          <a class="btn btn-p btn-sm sheet-store" id="sheetStore" href="#" target="_blank" rel="noopener" hidden>View on the App Store ↗</a>
+          <span class="sheet-state" id="sheetState"></span>
+        </div>
+      </div>
+      <dl class="strip" id="sheetStrip"></dl>
+      <div class="sheet-body">
+        <p id="sheetAbout"></p>
+        <ul class="points" id="sheetPoints"></ul>
+        <div class="pills" id="sheetPills"></div>
+        <p class="sheet-src" id="sheetSrc" hidden>Release date, version and category from public App Store listings.</p>
+      </div>
+      <div class="sheet-foot">
+        <button class="sheet-nav" id="sheetPrev" type="button">← Previous</button>
+        <button class="sheet-nav" id="sheetNext" type="button">Next →</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="apps.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
