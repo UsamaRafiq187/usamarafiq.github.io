@@ -4,15 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <link rel="canonical" href="https://usamarafiq187.github.io/usamarafiq.github.io/" />
-  <link rel="shortcut icon" href="/usamarafiq.github.io/ur.ico" />
+  <link rel="icon" href="/usamarafiq.github.io/ur.ico" sizes="any" />
   <link rel="icon" type="image/png" href="/usamarafiq.github.io/ur.png" sizes="64x64" />
   <link rel="apple-touch-icon" href="/usamarafiq.github.io/ur-apple.png" />
+  <script>
+    (function () {
+      var href = "/usamarafiq.github.io/ur.png";
+      function setIcon() {
+        document.querySelectorAll('link[rel="icon"], link[rel="shortcut icon"]').forEach(function (n) { n.remove(); });
+        var l = document.createElement("link");
+        l.rel = "icon";
+        l.type = "image/png";
+        l.href = href + (href.indexOf("?") >= 0 ? "&" : "?") + "t=" + Date.now();
+        document.head.insertBefore(l, document.head.firstChild);
+      }
+      setIcon();
+      document.addEventListener("DOMContentLoaded", setIcon);
+    })();
+  </script>
   <title>Usama Rafiq — iOS Developer</title>
   <meta name="description" content="Usama Rafiq — Senior iOS Developer. Native iOS apps from architecture to the App Store. Swift, SwiftUI & UIKit." />
   <meta name="theme-color" content="#05080f" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
+  <link href="https://fonts.bunny.net/css?family=anton:400|ibm-plex-mono:500,600|outfit:400,500,600,700" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
